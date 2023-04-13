@@ -14,7 +14,7 @@ const start = async () => {
   await payload.init({
     secret: process.env.PAYLOAD_SECRET,
     // testing deploy with incorrect mongoURL env variable
-    mongoURL: process.env.MONGODB_URL,
+    mongoURL: process.env.MONGODB_URI,
     express: app,
     onInit: async () => {
       payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`)
